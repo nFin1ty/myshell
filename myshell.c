@@ -169,24 +169,7 @@ int verifyDelims(char *input, char *delimiter) {
 			stack = ret + 2;
 		}
 	}
-
-	else if (*delimiter == ';') {
-
-		//Check if there is exactly 1 ;
-		//for every ; occurence
-		while( (ret = strstr(stack, ";")) != NULL ){
-
-			if(ret[1] == ';'){
-				check = 0;
-				break;
-			}
-
-			//Search the rest of the string (after &&)
-			stack = ret + 1;
-		}
-
-	}
-
+	
 	return check;
 }
 
